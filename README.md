@@ -14,3 +14,5 @@ git clone --depth 1 https://github.com/CocoaPods/Specs.git master
 ```shell
 pod install
 ```
+
+3. Make sure you open `GoogleSheetsPOC.xcworkspace` file
