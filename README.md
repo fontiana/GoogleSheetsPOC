@@ -2,7 +2,7 @@
 
 ### Executing APP
 
-1. Prepare your CocoaPods Repo. *Execute only if its the first time installing any pods*
+1. Prepare your CocoaPods Repo. *Only if its your first time installing any pods*
 ```shell
 pod repo remove master
 cd ~/.cocoapods/repos 
