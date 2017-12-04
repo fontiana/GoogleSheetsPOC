@@ -27,7 +27,9 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().scopes = scopes
-        GIDSignIn.sharedInstance().signInSilently()
+        
+        GIDSignIn.sharedInstance().clientID = "832262025030-be31sijfsd1btmfh6f3hm0u0bd8u1nou.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
         
         // Add the sign-in button.
         view.addSubview(signInButton)
