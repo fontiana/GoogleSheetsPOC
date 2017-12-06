@@ -9,9 +9,10 @@
 import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
-
+    
     private let scopes = [kGTLRAuthScopeSheetsSpreadsheetsReadonly]
     
     private let service = GTLRSheetsService()
@@ -23,7 +24,9 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().scopes = scopes
+        GIDSignIn.sharedInstance().scopes = [
+            "https://www.googleapis.com/auth/spreadsheets"
+        ]
         
         GIDSignIn.sharedInstance().clientID = "832262025030-be31sijfsd1btmfh6f3hm0u0bd8u1nou.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
@@ -53,6 +56,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             self.output.isHidden = false
             self.service.authorizer = user.authentication.fetcherAuthorizer()
             checkSheet()
+            createSheet()
         }
     }
     
@@ -61,48 +65,47 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     }
     
     func createSheet() {
+        let newSheet = GTLRSheets_Spreadsheet.init()
+        let properties = GTLRSheets_SpreadsheetProperties.init()
         
+        properties.title = "Google Sheets POC"
+        newSheet.properties = properties
+        
+        let query = GTLRSheetsQuery_SpreadsheetsCreate
+            .query(withObject: newSheet)
+        query.fields = "spreadsheetId"
+        service.executeQuery(query,
+                             delegate: self,
+                             didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
-//    func listMajors() {
-//        output.text = "Getting sheet data..."
-//        let spreadsheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"
-//        let range = "Class Data!A2:E"
-//        let query = GTLRSheetsQuery_SpreadsheetsValuesGet
-//            .query(withSpreadsheetId: spreadsheetId, range:range)
-//        service.executeQuery(query,
-//                             delegate: self,
-//                             didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:))
-//        )
-//    }
-//    
-//    func displayResultWithTicket(ticket: GTLRServiceTicket,
-//                                 finishedWithObject result : GTLRSheets_ValueRange,
-//                                 error : NSError?) {
-//        
-//        if let error = error {
-//            showAlert(title: "Error", message: error.localizedDescription)
-//            return
-//        }
-//        
-//        var majorsString = ""
-//        let rows = result.values!
-//        
-//        if rows.isEmpty {
-//            output.text = "No data found."
-//            return
-//        }
-//        
-//        majorsString += "Name, Major:\n"
-//        for row in rows {
-//            let name = row[0]
-//            let major = row[4]
-//            
-//            majorsString += "\(name), \(major)\n"
-//        }
-//        
-//        output.text = majorsString
-//    }
+    //    func createSheet(accessToken: String) {
+    //        let parameters: Parameters = [
+    //            "spreadsheetId": "googlesheetspoc1234",
+    //            "resource": [
+    //
+    //            ]
+    //        ]
+    //
+    //        let headers: HTTPHeaders = [
+    //            "Authorization": "Bearer \(accessToken)"
+    //        ]
+    //
+    //        Alamofire.request("https://sheets.googleapis.com/v4/spreadsheets", method: .post, parameters: parameters, headers: headers)
+    //            .responseJSON { response in
+    //                debugPrint(response)
+    //        }
+    //    }
+    
+    func displayResultWithTicket(ticket: GTLRServiceTicket,
+                                 finishedWithObject result : GTLRSheets_ValueRange,
+                                 error : NSError?) {
+        
+        if let error = error {
+            showAlert(title: "Error", message: error.localizedDescription)
+            return
+        }
+    }
     
     
     func showAlert(title : String, message: String) {
