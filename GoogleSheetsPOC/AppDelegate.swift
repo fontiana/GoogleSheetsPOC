@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        // Initialize sign-in
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")

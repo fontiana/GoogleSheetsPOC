@@ -16,6 +16,33 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>***Your bundle ID***</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.832262025030-be31sijfsd1btmfh6f3hm0u0bd8u1nou</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>***Something here***</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -41,32 +68,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>***Your bundle ID***</string>
-            </array>
-        </dict>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>com.googleusercontent.apps.832262025030-be31sijfsd1btmfh6f3hm0u0bd8u1nou</string>
-            </array>
-        </dict>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>***Something here***</string>
-            </array>
-        </dict>
-    </array>
 </dict>
 </plist>
