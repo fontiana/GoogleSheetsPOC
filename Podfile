@@ -4,5 +4,5 @@ target 'GoogleSheetsPOC' do
     pod 'GoogleAPIClientForREST/Sheets', '~> 1.2.1'
     pod 'Google/SignIn', '~> 3.0.3'
     pod 'SwiftyJSON', '~> 3.0'
-    pod 'Alamofire', '~> 4.5'
+    pod 'SwiftLint'
 end

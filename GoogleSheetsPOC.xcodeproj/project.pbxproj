@@ -104,6 +104,7 @@
 				63D3F0CD1FD0F82F008B626B /* Resources */,
 				303646FAA5A5D162B2EF4B9D /* [CP] Embed Pods Frameworks */,
 				C5C346037CECF573B202FC25 /* [CP] Copy Pods Resources */,
+				6391AA721FD8D81000E50D92 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -171,7 +172,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleSheetsPOC/Pods-GoogleSheetsPOC-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
@@ -180,7 +180,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
@@ -191,6 +190,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleSheetsPOC/Pods-GoogleSheetsPOC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6391AA721FD8D81000E50D92 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		C5C346037CECF573B202FC25 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

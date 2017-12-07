@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (4.5.1)
   - FirebaseAnalytics (3.9.0):
     - FirebaseCore (~> 3.6)
     - FirebaseInstanceID (~> 1.0)
@@ -40,16 +39,16 @@ PODS:
   - GTMSessionFetcher/Core (1.1.12)
   - GTMSessionFetcher/Full (1.1.12):
     - GTMSessionFetcher/Core (= 1.1.12)
+  - SwiftLint (0.24.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5)
   - Google/SignIn (~> 3.0.3)
   - GoogleAPIClientForREST/Sheets (~> 1.2.1)
+  - SwiftLint
   - SwiftyJSON (~> 3.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
@@ -59,8 +58,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: be83fd28d63ae3087e7d351b1f39c1a7e24ab6e7
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 3c095336fad68bf876b0cc3ad827d5836e227c48
+PODFILE CHECKSUM: aaa3413b65617e42e04f1cbf582b8ab1a9aedf2d
 
 COCOAPODS: 1.3.1

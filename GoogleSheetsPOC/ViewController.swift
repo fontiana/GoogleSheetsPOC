@@ -9,7 +9,6 @@
 import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
-import Alamofire
 
 class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
@@ -43,7 +42,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         output.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
         output.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         output.isHidden = true
-        view.addSubview(output);
+        view.addSubview(output)
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
@@ -60,8 +59,8 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         }
     }
     
-    func checkSheet() {
-        
+    func checkSheet() -> Bool {
+        return false
     }
     
     func createSheet() {
@@ -78,24 +77,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                              delegate: self,
                              didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
-    
-    //    func createSheet(accessToken: String) {
-    //        let parameters: Parameters = [
-    //            "spreadsheetId": "googlesheetspoc1234",
-    //            "resource": [
-    //
-    //            ]
-    //        ]
-    //
-    //        let headers: HTTPHeaders = [
-    //            "Authorization": "Bearer \(accessToken)"
-    //        ]
-    //
-    //        Alamofire.request("https://sheets.googleapis.com/v4/spreadsheets", method: .post, parameters: parameters, headers: headers)
-    //            .responseJSON { response in
-    //                debugPrint(response)
-    //        }
-    //    }
     
     func displayResultWithTicket(ticket: GTLRServiceTicket,
                                  finishedWithObject result : GTLRSheets_ValueRange,
