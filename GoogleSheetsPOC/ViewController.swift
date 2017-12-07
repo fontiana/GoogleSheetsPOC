@@ -62,14 +62,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     func checkSheet() -> Bool {
         return false
     }
-    
     func createSheet() {
         let newSheet = GTLRSheets_Spreadsheet.init()
         let properties = GTLRSheets_SpreadsheetProperties.init()
-        
         properties.title = "Google Sheets POC"
         newSheet.properties = properties
-        
         let query = GTLRSheetsQuery_SpreadsheetsCreate
             .query(withObject: newSheet)
         query.fields = "spreadsheetId"
@@ -79,7 +76,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     }
     
     func displayResultWithTicket(ticket: GTLRServiceTicket,
-                                 finishedWithObject result : GTLRSheets_ValueRange,
+                                 finishedWithObject result: GTLRSheets_ValueRange,
                                  error : NSError?) {
         
         if let error = error {
