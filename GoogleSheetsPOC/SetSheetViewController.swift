@@ -31,9 +31,9 @@ class SetSheetViewController: UIViewController {
                              didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
-    func displayResultWithTicket(ticket: GTLRServiceTicket,
-                                 finishedWithObject result: GTLRSheets_ValueRange,
-                                 error: NSError?) {
+    @objc func displayResultWithTicket(ticket: GTLRServiceTicket,
+                                       finishedWithObject result: GTLRSheets_ValueRange,
+                                       error: NSError?) {
         
         if let error = error {
             let alertController = UIAlertController(title: "Error",
