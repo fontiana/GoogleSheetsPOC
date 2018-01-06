@@ -1,2 +1,5 @@
-
+"SignInToContinue" = "Crie uma conta";
+"CreateAnAccount" = "Criar conta";
+"SignIn" = "Entrar";
+"ContinueWithoutSigningIn" = "Continuar sem criar conta";
 "AppName" = "FinanceApp";
