@@ -1,6 +1,6 @@
 # GoogleSheetsPOC
 
-*You should install cocoapods to your mac before executing the app*
+*You should install cocoapods on your mac before executing the app*
 
 ```
 sudo gem install cocoapods
@@ -8,7 +8,7 @@ sudo gem install cocoapods
 
 ### Executing APP
 
-1. Prepare your CocoaPods Repo. *Only if its your first time installing any pod*
+1. Prepare your CocoaPods Repo. *Only if it is your first time installing any pod*
 ```shell
 pod repo remove master
 cd ~/.cocoapods/repos 
