@@ -44,7 +44,7 @@ class SubtitleLabel: UILabel {
     
     func commonInit() {
         self.textColor = UIColor.white
-        self.font.withSize(20)
+        self.font = UIFont.systemFont(ofSize: 22)
     }
     
     @IBInspectable var keyValue: String {

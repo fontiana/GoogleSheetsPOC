@@ -61,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign to Continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMG-5N-qpR" customClass="SubtitleLabel" customModule="GoogleSheetsPOC" customModuleProvider="target">
-                                <rect key="frame" x="108" y="20" width="127" height="21"/>
+                                <rect key="frame" x="108" y="32" width="127" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -92,12 +92,12 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="TVT-T9-OQw" firstAttribute="top" secondItem="DMG-5N-qpR" secondAttribute="bottom" constant="15" id="3Co-Ae-yJ0"/>
                             <constraint firstItem="3l7-Ud-AD6" firstAttribute="top" secondItem="TVT-T9-OQw" secondAttribute="bottom" constant="20" id="3xs-Qf-dya"/>
                             <constraint firstItem="Jcv-Te-tcs" firstAttribute="centerY" secondItem="TVT-T9-OQw" secondAttribute="centerY" id="8nA-5V-e8C"/>
                             <constraint firstItem="Jcv-Te-tcs" firstAttribute="leading" secondItem="TVT-T9-OQw" secondAttribute="trailing" constant="20" id="9sa-Q0-DhZ"/>
                             <constraint firstAttribute="trailing" secondItem="Jcv-Te-tcs" secondAttribute="trailing" constant="86" id="DJa-7h-gQe"/>
                             <constraint firstItem="3l7-Ud-AD6" firstAttribute="centerX" secondItem="DMG-5N-qpR" secondAttribute="centerX" id="OVz-uc-XJG"/>
-                            <constraint firstItem="DMG-5N-qpR" firstAttribute="top" secondItem="sej-of-UPQ" secondAttribute="top" constant="20" symbolic="YES" id="TgO-Za-irU"/>
                             <constraint firstItem="DMG-5N-qpR" firstAttribute="centerX" secondItem="sej-of-UPQ" secondAttribute="centerX" id="Vw8-wQ-cUy"/>
                             <constraint firstItem="TVT-T9-OQw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sej-of-UPQ" secondAttribute="leading" id="Z00-m9-IVN"/>
                             <constraint firstItem="TVT-T9-OQw" firstAttribute="centerY" secondItem="sej-of-UPQ" secondAttribute="centerY" id="la9-r7-WHP"/>

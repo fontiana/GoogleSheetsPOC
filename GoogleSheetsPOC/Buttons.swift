@@ -75,6 +75,8 @@ class SignInButton: UIButton {
     private func commonInit() {
         self.setTitleColor(UIColor.white, for: .normal)
         self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
+        self.layer.borderWidth = 1 //TODO: Change to image so there will be fade-out animation
+        self.layer.borderColor = UIColor.white.cgColor //TODO: Change to image so there will be fade-out animation
     }
 }
 
