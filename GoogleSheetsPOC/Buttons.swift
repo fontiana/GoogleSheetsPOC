@@ -39,6 +39,7 @@ class CreateAccountButton: UIButton {
     
     private func commonInit() {
         self.setTitleColor(UIColor.white, for: .normal)
+        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
         
         if let existingLayer = roundRectLayer {
             existingLayer.removeFromSuperlayer()
@@ -55,4 +56,50 @@ class CreateAccountButton: UIButton {
 
 class SignInButton: UIButton {
     
+    @IBInspectable var keyValue: String {
+        get {
+            return self.titleLabel!.text!
+        }
+        set(value) {
+            self.setTitle(NSLocalizedString(value, comment: ""), for: .normal)
+        }
+    }
+    
+    // MARK: Overrides
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        commonInit()
+    }
+    
+    // MARK: Private
+    private func commonInit() {
+        self.setTitleColor(UIColor.white, for: .normal)
+        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
+    }
+}
+
+// MARK: HiperlinkButton subclass
+
+class HiperlinkButton: UIButton {
+    
+    @IBInspectable var keyValue: String {
+        get {
+            return self.titleLabel!.text!
+        }
+        set(value) {
+            self.setTitle(NSLocalizedString(value, comment: ""), for: .normal)
+        }
+    }
+    
+    // MARK: Overrides
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        commonInit()
+    }
+    
+    // MARK: Private
+    private func commonInit() {
+        self.setTitleColor(UIColor.white, for: .normal)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+    }
 }
