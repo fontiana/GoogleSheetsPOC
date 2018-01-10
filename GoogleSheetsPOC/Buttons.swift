@@ -6,7 +6,7 @@ class CreateAccountButton: UIButton {
     
     // MARK: Public interface
     /// Corner radius of the background rectangle
-    public var roundRectCornerRadius: CGFloat = 2 {
+    public var roundRectCornerRadius: CGFloat = 3 {
         didSet {
             self.setNeedsLayout()
         }

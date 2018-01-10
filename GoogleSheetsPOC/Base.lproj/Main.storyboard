@@ -77,14 +77,14 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcv-Te-tcs" customClass="SignInButton" customModule="GoogleSheetsPOC" customModuleProvider="target">
-                                <rect key="frame" x="214" y="68" width="43" height="30"/>
+                                <rect key="frame" x="235" y="68" width="43" height="30"/>
                                 <state key="normal" title="SignIn"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="SignIn"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVT-T9-OQw" customClass="CreateAccountButton" customModule="GoogleSheetsPOC" customModuleProvider="target">
-                                <rect key="frame" x="73" y="68" width="121" height="30"/>
+                                <rect key="frame" x="94" y="68" width="121" height="30"/>
                                 <state key="normal" title="CreateAnAccount"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="CreateAnAccount"/>
@@ -96,7 +96,7 @@
                             <constraint firstItem="3l7-Ud-AD6" firstAttribute="top" secondItem="TVT-T9-OQw" secondAttribute="bottom" constant="20" id="3xs-Qf-dya"/>
                             <constraint firstItem="Jcv-Te-tcs" firstAttribute="centerY" secondItem="TVT-T9-OQw" secondAttribute="centerY" id="8nA-5V-e8C"/>
                             <constraint firstItem="Jcv-Te-tcs" firstAttribute="leading" secondItem="TVT-T9-OQw" secondAttribute="trailing" constant="20" id="9sa-Q0-DhZ"/>
-                            <constraint firstAttribute="trailing" secondItem="Jcv-Te-tcs" secondAttribute="trailing" constant="86" id="DJa-7h-gQe"/>
+                            <constraint firstAttribute="trailing" secondItem="Jcv-Te-tcs" secondAttribute="trailing" constant="65" id="DJa-7h-gQe"/>
                             <constraint firstItem="3l7-Ud-AD6" firstAttribute="centerX" secondItem="DMG-5N-qpR" secondAttribute="centerX" id="OVz-uc-XJG"/>
                             <constraint firstItem="DMG-5N-qpR" firstAttribute="centerX" secondItem="sej-of-UPQ" secondAttribute="centerX" id="Vw8-wQ-cUy"/>
                             <constraint firstItem="TVT-T9-OQw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sej-of-UPQ" secondAttribute="leading" id="Z00-m9-IVN"/>
