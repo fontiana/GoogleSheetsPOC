@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="-823.20000000000005" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tXb-Px-AEh">
             <objects>
-                <viewController id="Gbh-kw-0wv" sceneMemberID="viewController">
+                <viewController id="Gbh-kw-0wv" customClass="MainViewController" customModule="GoogleSheetsPOC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9WM-vt-8kM"/>
                         <viewControllerLayoutGuide type="bottom" id="bms-bL-1t0"/>
@@ -89,6 +89,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="CreateAnAccount"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountButton:" destination="Gbh-kw-0wv" eventType="touchUpInside" id="eBC-4T-ibD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
