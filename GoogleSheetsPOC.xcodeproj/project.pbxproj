@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231DB86A200A4AC3003BBBAF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DB869200A4AC3003BBBAF /* SignInViewController.swift */; };
 		232467512006F42B00275802 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 232467502006F42B00275802 /* SignInViewController.xib */; };
 		232467532006F78C00275802 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232467522006F78C00275802 /* MainViewController.swift */; };
 		2385DE7920017E76002F42BC /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385DE7820017E76002F42BC /* Buttons.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		17E62A00A58D45FAF4DB0AB5 /* Pods-GoogleSheetsPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSheetsPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleSheetsPOC/Pods-GoogleSheetsPOC.debug.xcconfig"; sourceTree = "<group>"; };
+		231DB869200A4AC3003BBBAF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		232467502006F42B00275802 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		232467522006F78C00275802 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2385DE7820017E76002F42BC /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				631F89521FDDE18500D6A03F /* SetSheetViewController.swift */,
 				63D3F0D41FD0F82F008B626B /* CreateSheet.swift */,
 				232467522006F78C00275802 /* MainViewController.swift */,
+				231DB869200A4AC3003BBBAF /* SignInViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				63D3F0D51FD0F82F008B626B /* CreateSheet.swift in Sources */,
 				63D3F0D31FD0F82F008B626B /* AppDelegate.swift in Sources */,
 				63FE5B661FDDD48000904660 /* Constants.swift in Sources */,
+				231DB86A200A4AC3003BBBAF /* SignInViewController.swift in Sources */,
 				631F895A1FDDE94900D6A03F /* ViewExtensions.swift in Sources */,
 				631F89541FDDE18500D6A03F /* SetSheetViewController.swift in Sources */,
 				232467532006F78C00275802 /* MainViewController.swift in Sources */,
