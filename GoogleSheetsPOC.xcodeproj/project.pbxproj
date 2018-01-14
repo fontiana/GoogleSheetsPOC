@@ -16,7 +16,6 @@
 		631F895A1FDDE94900D6A03F /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F89591FDDE94900D6A03F /* ViewExtensions.swift */; };
 		63C857991FD36F5E00A07806 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63C857981FD36F5E00A07806 /* GoogleService-Info.plist */; };
 		63D3F0D31FD0F82F008B626B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3F0D21FD0F82F008B626B /* AppDelegate.swift */; };
-		63D3F0D51FD0F82F008B626B /* CreateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3F0D41FD0F82F008B626B /* CreateSheet.swift */; };
 		63D3F0D81FD0F82F008B626B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D3F0D61FD0F82F008B626B /* Main.storyboard */; };
 		63D3F0DD1FD0F82F008B626B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D3F0DC1FD0F82F008B626B /* Assets.xcassets */; };
 		63D3F0E01FD0F82F008B626B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D3F0DE1FD0F82F008B626B /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 		63C857981FD36F5E00A07806 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63D3F0CF1FD0F82F008B626B /* GoogleSheetsPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSheetsPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D3F0D21FD0F82F008B626B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63D3F0D41FD0F82F008B626B /* CreateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSheet.swift; sourceTree = "<group>"; };
 		63D3F0D71FD0F82F008B626B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63D3F0DC1FD0F82F008B626B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63D3F0DF1FD0F82F008B626B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				631F89521FDDE18500D6A03F /* SetSheetViewController.swift */,
-				63D3F0D41FD0F82F008B626B /* CreateSheet.swift */,
 				232467522006F78C00275802 /* MainViewController.swift */,
 				231DB869200A4AC3003BBBAF /* SignInViewController.swift */,
 			);
@@ -348,7 +345,6 @@
 			files = (
 				2385DE7920017E76002F42BC /* Buttons.swift in Sources */,
 				63F6DFBE1FDF4DA400F3AC11 /* Labels.swift in Sources */,
-				63D3F0D51FD0F82F008B626B /* CreateSheet.swift in Sources */,
 				63D3F0D31FD0F82F008B626B /* AppDelegate.swift in Sources */,
 				63FE5B661FDDD48000904660 /* Constants.swift in Sources */,
 				231DB86A200A4AC3003BBBAF /* SignInViewController.swift in Sources */,
