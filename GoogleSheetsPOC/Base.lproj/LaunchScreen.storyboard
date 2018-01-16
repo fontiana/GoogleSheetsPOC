@@ -24,13 +24,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iOS_BG" translatesAutoresizingMaskIntoConstraints="NO" id="teF-bo-LHi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iBugdet" translatesAutoresizingMaskIntoConstraints="NO" id="sp3-xX-T8Y">
+                                <rect key="frame" x="27.5" y="263.5" width="320" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="EJ0-Sg-O7S"/>
+                                    <constraint firstAttribute="width" constant="320" id="ThI-29-xs2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="teF-bo-LHi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Q3W-i5-ZXI"/>
+                            <constraint firstItem="sp3-xX-T8Y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="e0x-co-eJ1"/>
                             <constraint firstItem="teF-bo-LHi" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="gZ2-AF-vQA"/>
                             <constraint firstItem="teF-bo-LHi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gss-1R-nQQ"/>
                             <constraint firstItem="teF-bo-LHi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ldc-Vg-bEq"/>
+                            <constraint firstItem="sp3-xX-T8Y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zQE-xg-1A7"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,6 +49,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iBugdet" width="720" height="263"/>
         <image name="iOS_BG" width="1242" height="2208"/>
     </resources>
 </document>
