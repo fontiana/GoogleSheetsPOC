@@ -22,7 +22,8 @@ class SignInButton: UIButton {
     // MARK: Private
     private func commonInit() {
         self.setTitleColor(UIColor.white, for: .normal)
-        self.setImage(UIImage(named: "google-logo.png"), for: .normal)
+        let googleLogo = UIImage(named: "google-logo.png")
+        self.setImage(googleLogo?.withRenderingMode(.alwaysOriginal), for: .normal)
         self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
         self.layer.borderWidth = 1 //TODO: Change to image so there will be fade-out animation
         self.layer.borderColor = UIColor.white.cgColor //TODO: Change to image so there will be fade-out animation
