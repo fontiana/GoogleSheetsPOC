@@ -3,5 +3,6 @@
 "CreateAccount" = "Create account";
 "SignInWithGoogle" = "Sign in with Google";
 "ContinueWithoutSigningIn" = "Continue without signing in";
-"AppName" = "FinanceApp";
+"Cancel" = "Cancel";
+"AuthenticationError" = "Authentication Error";
 "Welcome" = "Welcome";

@@ -3,5 +3,6 @@
 "CreateAccount" = "Criar conta";
 "SignInWithGoogle" = "Entrar com Google";
 "ContinueWithoutSigningIn" = "Continuar sem criar conta";
-"AppName" = "FinanceApp";
+"Cancel" = "Cancelar";
+"AuthenticationError" = "Erro ao autenticar";
 "Welcome" = "Bem-vindo";

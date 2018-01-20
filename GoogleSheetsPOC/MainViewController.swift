@@ -31,8 +31,12 @@ class MainViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
         if let error = error {
-            let alertController = UIAlertController(title: "Authentication Error",
+            let cancel = NSLocalizedString("Cancel", comment: "")
+            let AuthenticationError = NSLocalizedString("AuthenticationError", comment: "")
+            
+            let alertController = UIAlertController(title: AuthenticationError,
                                                     message: error.localizedDescription, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
             alertController.show()
             self.service.authorizer = nil
         } else {
