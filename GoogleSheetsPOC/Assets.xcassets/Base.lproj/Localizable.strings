@@ -1,6 +1,7 @@
 "SignInToContinue" = "Crie uma conta";
 "CreateAnAccount" = "Criar uma conta";
 "CreateAccount" = "Criar conta";
-"SignIn" = "Entrar";
+"SignInWithGoogle" = "Entrar com Google";
 "ContinueWithoutSigningIn" = "Continuar sem criar conta";
 "AppName" = "FinanceApp";
+"Welcome" = "Bem-vindo";

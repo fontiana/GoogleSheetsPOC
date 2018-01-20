@@ -30,7 +30,7 @@ class BasicLabel: UILabel {
 
 // MARK: SubtitleLabel subclass
 
-class SubtitleLabel: UILabel {
+class TitleLabel: UILabel {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -44,7 +44,7 @@ class SubtitleLabel: UILabel {
     
     func commonInit() {
         self.textColor = UIColor.white
-        self.font = UIFont.systemFont(ofSize: 22)
+        self.font = UIFont.systemFont(ofSize: 48)
     }
     
     @IBInspectable var keyValue: String {

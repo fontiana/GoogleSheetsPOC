@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iOS_BG" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-Ht-lKH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-Ht-lKH">
                                 <rect key="frame" x="0.0" y="-771" width="375" height="2208"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSz-3g-mjZ" userLabel="Selection container">
@@ -31,6 +31,15 @@
                                     <segue destination="Gbh-kw-0wv" kind="embed" id="b5Y-Ze-Hw9"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign to Continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMG-5N-qpR" customClass="TitleLabel" customModule="GoogleSheetsPOC" customModuleProvider="target">
+                                <rect key="frame" x="124" y="211" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="Welcome"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -40,6 +49,8 @@
                             <constraint firstItem="Laj-Ht-lKH" firstAttribute="centerY" secondItem="0uu-NZ-5iI" secondAttribute="centerY" id="cbZ-pD-Mba"/>
                             <constraint firstItem="Laj-Ht-lKH" firstAttribute="leading" secondItem="0uu-NZ-5iI" secondAttribute="leading" id="fLI-Xn-Yx1"/>
                             <constraint firstItem="eSz-3g-mjZ" firstAttribute="top" secondItem="zcG-9f-ASv" secondAttribute="bottom" constant="460" id="hiC-nv-vVb"/>
+                            <constraint firstItem="DMG-5N-qpR" firstAttribute="centerX" secondItem="0uu-NZ-5iI" secondAttribute="centerX" id="rpL-ev-GI5"/>
+                            <constraint firstItem="Laj-Ht-lKH" firstAttribute="top" secondItem="DMG-5N-qpR" secondAttribute="bottom" constant="-1003" id="y3Y-3l-iND"/>
                             <constraint firstItem="eSz-3g-mjZ" firstAttribute="leading" secondItem="0uu-NZ-5iI" secondAttribute="leadingMargin" id="ygf-wT-Asf"/>
                         </constraints>
                     </view>
@@ -60,40 +71,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="343" height="167"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign to Continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMG-5N-qpR" customClass="SubtitleLabel" customModule="GoogleSheetsPOC" customModuleProvider="target">
-                                <rect key="frame" x="108" y="31" width="127" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVT-T9-OQw" customClass="CreateAccountButton" customModule="GoogleSheetsPOC" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="327" height="30"/>
+                                <state key="normal" title="SignInWithGoogle"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="SignInToContinue"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l7-Ud-AD6" customClass="HiperlinkButton" customModule="GoogleSheetsPOC" customModuleProvider="target">
-                                <rect key="frame" x="82" y="117" width="179" height="30"/>
-                                <state key="normal" title="ContinueWithoutSigningIn"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="ContinueWithoutSigningIn"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVT-T9-OQw" customClass="SignInButton" customModule="GoogleSheetsPOC" customModuleProvider="target">
-                                <rect key="frame" x="150" y="68" width="43" height="30"/>
-                                <state key="normal" title="SignIn"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="SignIn"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="SignInWithGoogle"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccountButton:" destination="Gbh-kw-0wv" eventType="touchUpInside" id="eBC-4T-ibD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l7-Ud-AD6" customClass="HiperlinkButton" customModule="GoogleSheetsPOC" customModuleProvider="target">
+                                <rect key="frame" x="82" y="129" width="179" height="30"/>
+                                <state key="normal" title="ContinueWithoutSigningIn"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyValue" value="ContinueWithoutSigningIn"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="TVT-T9-OQw" firstAttribute="centerY" secondItem="sej-of-UPQ" secondAttribute="centerY" id="6sA-3Y-Dy5"/>
-                            <constraint firstItem="3l7-Ud-AD6" firstAttribute="centerX" secondItem="DMG-5N-qpR" secondAttribute="centerX" id="OVz-uc-XJG"/>
-                            <constraint firstItem="DMG-5N-qpR" firstAttribute="centerX" secondItem="sej-of-UPQ" secondAttribute="centerX" id="Vw8-wQ-cUy"/>
-                            <constraint firstItem="TVT-T9-OQw" firstAttribute="top" secondItem="DMG-5N-qpR" secondAttribute="bottom" constant="16" id="cbq-Wx-Sga"/>
-                            <constraint firstItem="TVT-T9-OQw" firstAttribute="centerX" secondItem="sej-of-UPQ" secondAttribute="centerX" id="hgu-Re-rfe"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="3l7-Ud-AD6" secondAttribute="bottom" constant="20" id="sXG-Rd-bVf"/>
+                            <constraint firstItem="3l7-Ud-AD6" firstAttribute="centerX" secondItem="sej-of-UPQ" secondAttribute="centerX" id="4Z0-2M-Q3b"/>
+                            <constraint firstItem="TVT-T9-OQw" firstAttribute="leading" secondItem="sej-of-UPQ" secondAttribute="leading" constant="8" id="En4-Wo-Hbx"/>
+                            <constraint firstItem="TVT-T9-OQw" firstAttribute="centerX" secondItem="sej-of-UPQ" secondAttribute="centerX" id="Z7t-KT-zbo"/>
+                            <constraint firstItem="bms-bL-1t0" firstAttribute="top" secondItem="3l7-Ud-AD6" secondAttribute="bottom" constant="8" id="iE0-2V-9PP"/>
+                            <constraint firstItem="TVT-T9-OQw" firstAttribute="top" secondItem="9WM-vt-8kM" secondAttribute="bottom" constant="8" id="xfI-TD-6gq"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -103,6 +104,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iOS_BG" width="1242" height="2208"/>
+        <image name="Background" width="1242" height="2208"/>
     </resources>
 </document>

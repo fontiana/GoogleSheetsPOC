@@ -1,8 +1,23 @@
 import UIKit
 
-// MARK: SignInButton subclass
+// MARK: CreateAccountButton subclass
 
-class SignInButton: UIButton {
+class CreateAccountButton: UIButton {
+    
+    // MARK: Public interface
+    /// Corner radius of the background rectangle
+    public var roundRectCornerRadius: CGFloat = 3 {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
+    /// Color of the background rectangle
+    public var roundRectColor: UIColor = UIColor(hex: "0b78e3") {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
     
     @IBInspectable var keyValue: String {
         get {
@@ -20,13 +35,23 @@ class SignInButton: UIButton {
     }
     
     // MARK: Private
+    private var roundRectLayer: CAShapeLayer?
+    
     private func commonInit() {
         self.setTitleColor(UIColor.white, for: .normal)
+        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
+        
+        if let existingLayer = roundRectLayer {
+            existingLayer.removeFromSuperlayer()
+        }
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: roundRectCornerRadius).cgPath
+        shapeLayer.fillColor = roundRectColor.cgColor
+        self.layer.insertSublayer(shapeLayer, at: 0)
+        self.roundRectLayer = shapeLayer
+        
         let googleLogo = UIImage(named: "google-logo.png")
         self.setImage(googleLogo?.withRenderingMode(.alwaysOriginal), for: .normal)
-        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
-        self.layer.borderWidth = 1 //TODO: Change to image so there will be fade-out animation
-        self.layer.borderColor = UIColor.white.cgColor //TODO: Change to image so there will be fade-out animation
     }
 }
 
