@@ -1,4 +1,5 @@
 import GoogleAPIClientForREST
+import SwiftyJSON
 import UIKit
 
 class SetSheetViewController: UIViewController {
@@ -13,6 +14,16 @@ class SetSheetViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func checkSpreadsheet() {
+        let query = GTLRSheetsQuery_SpreadsheetsGet
+            .query(withSpreadsheetId: "")
+        query.fields = "spreadsheetId"
+        
+        service.executeQuery(query,
+                             delegate: self,
+                             didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
     func createSheet() {
@@ -42,6 +53,9 @@ class SetSheetViewController: UIViewController {
             alertController.show()
             return
         }
+        
+        let result = JSON(result.json)
+        let spreadSheetId = result["spreadsheetId"].string
     }
     
     func addActivityIndicatoryIn(uiView: UIView) {
