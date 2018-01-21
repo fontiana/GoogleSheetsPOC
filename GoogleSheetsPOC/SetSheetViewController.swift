@@ -8,7 +8,7 @@ class SetSheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addActivityIndicatoryIn(uiView: self.view)
-        //createSheet()
+        createSheet()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,8 +48,7 @@ class SetSheetViewController: UIViewController {
         //TODO: Make it singleton https://github.com/Isuru-Nanayakkara/IJProgressView
         let container: UIView = UIView()
         container.frame = uiView.frame
-        container.center = CGPoint(x: uiView.bounds.size.width / 2,
-                                y: uiView.bounds.size.height / 2)
+        container.center = uiView.center
         
         let loadingView: UIView = UIView()
         loadingView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
