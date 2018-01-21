@@ -8,7 +8,7 @@ class SetSheetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addActivityIndicatoryIn(uiView: self.view)
+        ProgressView.shared.showProgressView(self.view)
         createSheet()
     }
 
@@ -45,7 +45,7 @@ class SetSheetViewController: UIViewController {
     @objc func displayResultWithTicket(ticket: GTLRServiceTicket,
                                        finishedWithObject result: GTLRSheets_ValueRange,
                                        error: NSError?) {
-        
+        ProgressView.shared.hideProgressView()
         if let error = error {
             let alertController = UIAlertController(title: "Error",
                                                     message: error.localizedDescription,
@@ -56,30 +56,5 @@ class SetSheetViewController: UIViewController {
         
         let result = JSON(result.json)
         let spreadSheetId = result["spreadsheetId"].string
-    }
-    
-    func addActivityIndicatoryIn(uiView: UIView) {
-        //TODO: Make it singleton https://github.com/Isuru-Nanayakkara/IJProgressView
-        let container: UIView = UIView()
-        container.frame = uiView.frame
-        container.center = uiView.center
-        
-        let loadingView: UIView = UIView()
-        loadingView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
-        loadingView.center = uiView.center
-        loadingView.backgroundColor = UIColor(hex: "444444")
-        loadingView.clipsToBounds = true
-        loadingView.layer.cornerRadius = 10
-        
-        let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
-        actInd.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
-        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
-        actInd.center = CGPoint(x: loadingView.bounds.size.width / 2,
-                                y: loadingView.bounds.size.height / 2)
-        
-        loadingView.addSubview(actInd)
-        container.addSubview(loadingView)
-        uiView.addSubview(container)
-        actInd.startAnimating()
     }
 }
