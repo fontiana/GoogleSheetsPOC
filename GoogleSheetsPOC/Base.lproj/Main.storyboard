@@ -32,7 +32,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign to Continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMG-5N-qpR" customClass="TitleLabel" customModule="GoogleSheetsPOC" customModuleProvider="target">
-                                <rect key="frame" x="124" y="211" width="127" height="21"/>
+                                <rect key="frame" x="124" y="258" width="127" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                             <constraint firstItem="Laj-Ht-lKH" firstAttribute="leading" secondItem="0uu-NZ-5iI" secondAttribute="leading" id="fLI-Xn-Yx1"/>
                             <constraint firstItem="eSz-3g-mjZ" firstAttribute="top" secondItem="zcG-9f-ASv" secondAttribute="bottom" constant="460" id="hiC-nv-vVb"/>
                             <constraint firstItem="DMG-5N-qpR" firstAttribute="centerX" secondItem="0uu-NZ-5iI" secondAttribute="centerX" id="rpL-ev-GI5"/>
-                            <constraint firstItem="Laj-Ht-lKH" firstAttribute="top" secondItem="DMG-5N-qpR" secondAttribute="bottom" constant="-1003" id="y3Y-3l-iND"/>
+                            <constraint firstItem="Laj-Ht-lKH" firstAttribute="top" secondItem="DMG-5N-qpR" secondAttribute="bottom" constant="-1050" id="y3Y-3l-iND"/>
                             <constraint firstItem="eSz-3g-mjZ" firstAttribute="leading" secondItem="0uu-NZ-5iI" secondAttribute="leadingMargin" id="ygf-wT-Asf"/>
                         </constraints>
                     </view>

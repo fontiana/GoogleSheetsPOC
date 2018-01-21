@@ -18,8 +18,22 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Dl5-ch-PoV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Dl5-ch-PoV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="EzU-fa-YAa"/>
+                <constraint firstItem="Dl5-ch-PoV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PGT-av-RKb"/>
+                <constraint firstItem="Dl5-ch-PoV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PUK-f2-S7V"/>
+                <constraint firstItem="Dl5-ch-PoV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XeM-HX-xiX"/>
+            </constraints>
             <point key="canvasLocation" x="88.5" y="184.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="1242" height="2208"/>
+    </resources>
 </document>

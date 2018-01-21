@@ -7,8 +7,8 @@ class SetSheetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showActivityIndicatoryIn(uiView: self.view)
-        createSheet()
+        addActivityIndicatoryIn(uiView: self.view)
+        //createSheet()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,11 +44,12 @@ class SetSheetViewController: UIViewController {
         }
     }
     
-    func showActivityIndicatoryIn(uiView: UIView) {
+    func addActivityIndicatoryIn(uiView: UIView) {
+        //TODO: Make it singleton https://github.com/Isuru-Nanayakkara/IJProgressView
         let container: UIView = UIView()
         container.frame = uiView.frame
-        container.center = uiView.center
-        container.backgroundColor = UIColor(hex: "ffffff")
+        container.center = CGPoint(x: uiView.bounds.size.width / 2,
+                                y: uiView.bounds.size.height / 2)
         
         let loadingView: UIView = UIView()
         loadingView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
@@ -59,10 +60,10 @@ class SetSheetViewController: UIViewController {
         
         let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
         actInd.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
-        actInd.activityIndicatorViewStyle =
-            UIActivityIndicatorViewStyle.whiteLarge
-        actInd.center = CGPoint(x: loadingView.frame.size.width / 2,
-                                y: loadingView.frame.size.height / 2)
+        actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        actInd.center = CGPoint(x: loadingView.bounds.size.width / 2,
+                                y: loadingView.bounds.size.height / 2)
+        
         loadingView.addSubview(actInd)
         container.addSubview(loadingView)
         uiView.addSubview(container)
