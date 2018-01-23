@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		232467532006F78C00275802 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232467522006F78C00275802 /* MainViewController.swift */; };
 		232488C120152BA800C597C3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232488C020152BA800C597C3 /* ProgressView.swift */; };
+		23489F9E2016BD20003C06E0 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23489F9D2016BD20003C06E0 /* SaveManager.swift */; };
 		2385DE7920017E76002F42BC /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385DE7820017E76002F42BC /* Buttons.swift */; };
 		631F89541FDDE18500D6A03F /* SetSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F89521FDDE18500D6A03F /* SetSheetViewController.swift */; };
 		631F89551FDDE18500D6A03F /* SetSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631F89531FDDE18500D6A03F /* SetSheetViewController.xib */; };
@@ -28,6 +29,7 @@
 		17E62A00A58D45FAF4DB0AB5 /* Pods-GoogleSheetsPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSheetsPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleSheetsPOC/Pods-GoogleSheetsPOC.debug.xcconfig"; sourceTree = "<group>"; };
 		232467522006F78C00275802 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		232488C020152BA800C597C3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		23489F9D2016BD20003C06E0 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
 		2385DE7820017E76002F42BC /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		61BCF6292F89A16C7AC8867A /* Pods-GoogleSheetsPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSheetsPOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleSheetsPOC/Pods-GoogleSheetsPOC.release.xcconfig"; sourceTree = "<group>"; };
 		631F89521FDDE18500D6A03F /* SetSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSheetViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				232488C020152BA800C597C3 /* ProgressView.swift */,
+				23489F9D2016BD20003C06E0 /* SaveManager.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				63FE5B661FDDD48000904660 /* Constants.swift in Sources */,
 				631F895A1FDDE94900D6A03F /* ViewExtensions.swift in Sources */,
 				631F89541FDDE18500D6A03F /* SetSheetViewController.swift in Sources */,
+				23489F9E2016BD20003C06E0 /* SaveManager.swift in Sources */,
 				232488C120152BA800C597C3 /* ProgressView.swift in Sources */,
 				232467532006F78C00275802 /* MainViewController.swift in Sources */,
 			);
