@@ -3,27 +3,31 @@ import SwiftyJSON
 import UIKit
 
 class SetSheetViewController: UIViewController {
-
+    
     var service = GTLRSheetsService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ProgressView.shared.showProgressView(self.view)
+        
+        checkSpreadsheet()
         createSheet()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
+    } 
     
     func checkSpreadsheet() {
-        let query = GTLRSheetsQuery_SpreadsheetsGet
-            .query(withSpreadsheetId: "")
-        query.fields = "spreadsheetId"
-        
-        service.executeQuery(query,
-                             delegate: self,
-                             didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
+        if let spreadSheetId = SaveManager.sharedInstance().get(key: String.spreadsheetId) {
+            let query = GTLRSheetsQuery_SpreadsheetsGet
+                .query(withSpreadsheetId: spreadSheetId)
+            query.fields = String.spreadsheetId
+            
+            service.executeQuery(query,
+                                 delegate: self,
+                                 didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
+        }
     }
     
     func createSheet() {
@@ -35,7 +39,7 @@ class SetSheetViewController: UIViewController {
         
         let query = GTLRSheetsQuery_SpreadsheetsCreate
             .query(withObject: newSheet)
-        query.fields = "spreadsheetId"
+        query.fields = String.spreadsheetId
         
         service.executeQuery(query,
                              delegate: self,
@@ -54,7 +58,11 @@ class SetSheetViewController: UIViewController {
             return
         }
         
-        let result = JSON(result.json)
-        let spreadSheetId = result["spreadsheetId"].string
+        if let json = result.json {
+            let result = JSON(json)
+            let spreadSheetId = result["spreadsheetId"].string
+            SaveManager.sharedInstance().save(object: spreadSheetId as AnyObject,
+                                              key: String.spreadsheetId)
+        }
     }
 }

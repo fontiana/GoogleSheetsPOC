@@ -2,6 +2,6 @@
     Constants file
 */
 
-enum FooEnum {
-    static let splineReticulatorName = "foobar"
+extension String {
+    public static let spreadsheetId = "spreadsheetId"
 }
