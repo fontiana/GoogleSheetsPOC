@@ -10,30 +10,38 @@ class GoogleSheetsService {
         self.service = service
     }
     
-    func checkSpreadsheet() {
-        if let spreadSheetId = SaveManager.sharedInstance().get(key: String.spreadsheetId) {
-            let query = GTLRSheetsQuery_SpreadsheetsGet
-                .query(withSpreadsheetId: spreadSheetId)
-            query.fields = String.spreadsheetId
-            
-            service.executeQuery(query,
-                                 delegate: self,
-                                 didFinish: #selector(displayCheckesultWithTicket(ticket:finishedWithObject:error:)))
+    func checkSpreadsheet() -> Promise<Void> {
+        return Promise { resolve, reject in
+            if let spreadSheetId = SaveManager.sharedInstance().get(key: String.spreadsheetId) {
+                let query = GTLRSheetsQuery_SpreadsheetsGet
+                    .query(withSpreadsheetId: spreadSheetId)
+                query.fields = String.spreadsheetId
+                
+                service.executeQuery(query, completionHandler: { (ticket, result, error) in
+                    if error {
+                        reject()
+                    } else {
+                        resolve()
+                    }
+                })
+            }
         }
     }
     
-    @objc func displayCheckesultWithTicket(ticket: GTLRServiceTicket,
-                                           finishedWithObject result: GTLRSheets_ValueRange,
-                                           error: NSError?) {
-        if let error = error {
-            return
-        } else if let json = result.json {
-            let result = JSON(json)
-            let spreadSheetId = result[String.spreadsheetId].string
-            SaveManager.sharedInstance().save(object: spreadSheetId as AnyObject, key: String.spreadsheetId)
-            return
-        } else {
-            return
-        }
-    }
+    
+//    #selector(displayCheckesultWithTicket(ticket:finishedWithObject:error:)))
+//    @objc func displayCheckesultWithTicket(ticket: GTLRServiceTicket,
+//                                           finishedWithObject result: GTLRSheets_ValueRange,
+//                                           error: NSError?) {
+//        if let error = error {
+//            return
+//        } else if let json = result.json {
+//            let result = JSON(json)
+//            let spreadSheetId = result[String.spreadsheetId].string
+//            SaveManager.sharedInstance().save(object: spreadSheetId as AnyObject, key: String.spreadsheetId)
+//            return
+//        } else {
+//            return
+//        }
+//    }
 }
