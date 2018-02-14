@@ -16,32 +16,18 @@ class GoogleSheetsService {
                 let query = GTLRSheetsQuery_SpreadsheetsGet
                     .query(withSpreadsheetId: spreadSheetId)
                 query.fields = String.spreadsheetId
-                
+
                 service.executeQuery(query, completionHandler: { (ticket, result, error) in
-                    if error {
-                        reject()
+                    if let error = error {
+                        reject(error)
                     } else {
-                        resolve()
+                        let result = JSON(result.json)
+                        let spreadSheetId = result[String.spreadsheetId].string
+//                        SaveManager.sharedInstance().save(object: spreadSheetId as AnyObject, key: String.spreadsheetId)
+                        resolve(spreadSheetId)
                     }
                 })
             }
         }
     }
-    
-    
-//    #selector(displayCheckesultWithTicket(ticket:finishedWithObject:error:)))
-//    @objc func displayCheckesultWithTicket(ticket: GTLRServiceTicket,
-//                                           finishedWithObject result: GTLRSheets_ValueRange,
-//                                           error: NSError?) {
-//        if let error = error {
-//            return
-//        } else if let json = result.json {
-//            let result = JSON(json)
-//            let spreadSheetId = result[String.spreadsheetId].string
-//            SaveManager.sharedInstance().save(object: spreadSheetId as AnyObject, key: String.spreadsheetId)
-//            return
-//        } else {
-//            return
-//        }
-//    }
 }
