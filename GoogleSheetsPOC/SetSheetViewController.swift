@@ -10,8 +10,15 @@ class SetSheetViewController: UIViewController {
         super.viewDidLoad()
         ProgressView.shared.showProgressView(self.view)
         
-        checkSpreadsheet()
-        createSheet()
+        let googleSheetsService = GoogleSheetsService(service: service)
+        
+        googleSheetsService.getSpreadsheet()
+            .then { sheet -> Void in
+                
+            }.catch { (error) in
+                self.createSheet()
+            }
+        
     }
 
     override func didReceiveMemoryWarning() {

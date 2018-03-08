@@ -10,24 +10,27 @@ class GoogleSheetsService {
         self.service = service
     }
     
-    func checkSpreadsheet() -> Promise<Void> {
+    func getSpreadsheet() -> Promise<JSON> {
         return Promise { resolve, reject in
             if let spreadSheetId = SaveManager.sharedInstance().get(key: String.spreadsheetId) {
                 let query = GTLRSheetsQuery_SpreadsheetsGet
                     .query(withSpreadsheetId: spreadSheetId)
                 query.fields = String.spreadsheetId
 
-                service.executeQuery(query, completionHandler: { (ticket, result, error) in
+                service.executeQuery(query, completionHandler: { (_, result, error) in
                     if let error = error {
                         reject(error)
                     } else {
-                        let result = JSON(result.json)
-                        let spreadSheetId = result[String.spreadsheetId].string
-//                        SaveManager.sharedInstance().save(object: spreadSheetId as AnyObject, key: String.spreadsheetId)
-                        resolve(spreadSheetId)
+                        let result = JSON(result as Any)
+                        resolve(result)
                     }
                 })
             }
         }
+    }
+    
+    func createSheet() {
+//        SaveManager.sharedInstance().save(object: spreadSheetId as AnyObject, key: String.spreadsheetId)
+//        let spreadSheetId = result[String.spreadsheetId].string
     }
 }
