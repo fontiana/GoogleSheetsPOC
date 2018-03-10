@@ -2,6 +2,6 @@
     Constants file
 */
 
-extension String {
-    public static let spreadsheetId = "spreadsheetId"
+struct SpreadsheetConst {
+    static let spreadsheetId = "spreadsheetId"
 }
