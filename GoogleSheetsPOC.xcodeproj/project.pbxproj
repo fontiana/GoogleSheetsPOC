@@ -10,7 +10,6 @@
 		232467532006F78C00275802 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232467522006F78C00275802 /* MainViewController.swift */; };
 		232488C120152BA800C597C3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232488C020152BA800C597C3 /* ProgressView.swift */; };
 		23489F9E2016BD20003C06E0 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23489F9D2016BD20003C06E0 /* SaveManager.swift */; };
-		2385DE7920017E76002F42BC /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385DE7820017E76002F42BC /* Buttons.swift */; };
 		239BD5042054833D0037548E /* ErrorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239BD5032054833D0037548E /* ErrorsEnum.swift */; };
 		23E15212201D045F0045AA5F /* GoogleSheetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E15211201D045F0045AA5F /* GoogleSheetsService.swift */; };
 		631F89541FDDE18500D6A03F /* SetSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F89521FDDE18500D6A03F /* SetSheetViewController.swift */; };
@@ -21,7 +20,6 @@
 		63D3F0D81FD0F82F008B626B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D3F0D61FD0F82F008B626B /* Main.storyboard */; };
 		63D3F0DD1FD0F82F008B626B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D3F0DC1FD0F82F008B626B /* Assets.xcassets */; };
 		63D3F0E01FD0F82F008B626B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D3F0DE1FD0F82F008B626B /* LaunchScreen.storyboard */; };
-		63F6DFBE1FDF4DA400F3AC11 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F6DFBD1FDF4DA400F3AC11 /* Labels.swift */; };
 		63F6DFBF1FDF513D00F3AC11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63F6DFC11FDF513D00F3AC11 /* Localizable.strings */; };
 		63FE5B661FDDD48000904660 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE5B651FDDD48000904660 /* Constants.swift */; };
 		8FF6449FFF184BAEC0229F76 /* Pods_GoogleSheetsPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57002EC994A66395A9A9C31 /* Pods_GoogleSheetsPOC.framework */; };
@@ -32,13 +30,12 @@
 		232467522006F78C00275802 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		232488C020152BA800C597C3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		23489F9D2016BD20003C06E0 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
-		2385DE7820017E76002F42BC /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		239BD5032054833D0037548E /* ErrorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsEnum.swift; sourceTree = "<group>"; };
+		239BD5032054833D0037548E /* ErrorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorsEnum.swift; path = Tools/ErrorsEnum.swift; sourceTree = "<group>"; };
 		23E15211201D045F0045AA5F /* GoogleSheetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetsService.swift; sourceTree = "<group>"; };
 		61BCF6292F89A16C7AC8867A /* Pods-GoogleSheetsPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSheetsPOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleSheetsPOC/Pods-GoogleSheetsPOC.release.xcconfig"; sourceTree = "<group>"; };
 		631F89521FDDE18500D6A03F /* SetSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSheetViewController.swift; sourceTree = "<group>"; };
 		631F89531FDDE18500D6A03F /* SetSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetSheetViewController.xib; sourceTree = "<group>"; };
-		631F89591FDDE94900D6A03F /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		631F89591FDDE94900D6A03F /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtensions.swift; path = Tools/ViewExtensions.swift; sourceTree = "<group>"; };
 		63C857981FD36F5E00A07806 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63D3F0CF1FD0F82F008B626B /* GoogleSheetsPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSheetsPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D3F0D21FD0F82F008B626B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,10 +43,9 @@
 		63D3F0DC1FD0F82F008B626B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63D3F0DF1FD0F82F008B626B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63D3F0E11FD0F82F008B626B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63F6DFBD1FDF4DA400F3AC11 /* Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		63F6DFC01FDF513D00F3AC11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		63F6DFC21FDF514300F3AC11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		63FE5B651FDDD48000904660 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		63FE5B651FDDD48000904660 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Tools/Constants.swift; sourceTree = "<group>"; };
 		C57002EC994A66395A9A9C31 /* Pods_GoogleSheetsPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleSheetsPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,20 +61,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23137FCE205578F80030AA5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		23137FD0205579710030AA5C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				631F89521FDDE18500D6A03F /* SetSheetViewController.swift */,
+				232467522006F78C00275802 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23137FD120557A800030AA5C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				23E15211201D045F0045AA5F /* GoogleSheetsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		23137FD320557AA80030AA5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63D3F0D61FD0F82F008B626B /* Main.storyboard */,
+				631F89531FDDE18500D6A03F /* SetSheetViewController.xib */,
+				63D3F0DE1FD0F82F008B626B /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		23137FD420557AB80030AA5C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				232488C020152BA800C597C3 /* ProgressView.swift */,
+				23489F9D2016BD20003C06E0 /* SaveManager.swift */,
+				239BD5022054831C0037548E /* Errors */,
+				631F89581FDDE87C00D6A03F /* Extensions */,
+				63FE5B641FDDD46200904660 /* Constants */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		239BD5022054831C0037548E /* Errors */ = {
 			isa = PBXGroup;
 			children = (
 				239BD5032054833D0037548E /* ErrorsEnum.swift */,
 			);
 			name = Errors;
-			sourceTree = "<group>";
-		};
-		23E15210201D04060045AA5F /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				23E15211201D045F0045AA5F /* GoogleSheetsService.swift */,
-			);
-			name = Services;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		631F89581FDDE87C00D6A03F /* Extensions */ = {
@@ -87,6 +123,7 @@
 				631F89591FDDE94900D6A03F /* ViewExtensions.swift */,
 			);
 			name = Extensions;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		63D3F0C61FD0F82F008B626B = {
@@ -110,65 +147,17 @@
 		63D3F0D11FD0F82F008B626B /* GoogleSheetsPOC */ = {
 			isa = PBXGroup;
 			children = (
-				23E15210201D04060045AA5F /* Services */,
-				63F6DFBC1FDF4D8600F3AC11 /* Subclasses */,
+				23137FD420557AB80030AA5C /* Tools */,
+				23137FD320557AA80030AA5C /* Views */,
+				23137FD120557A800030AA5C /* Services */,
+				23137FD0205579710030AA5C /* Controllers */,
+				23137FCE205578F80030AA5C /* Models */,
 				63FE5B611FDDD3D000904660 /* Resources */,
-				63FE5B601FDDC4BE00904660 /* Tools */,
-				63FE5B5F1FDDC4B600904660 /* Controllers */,
-				63FE5B5E1FDDC4AD00904660 /* Views */,
-				63FE5B5D1FDDC4A500904660 /* Models */,
 				63D3F0D21FD0F82F008B626B /* AppDelegate.swift */,
 				63C857981FD36F5E00A07806 /* GoogleService-Info.plist */,
 				63D3F0E11FD0F82F008B626B /* Info.plist */,
 			);
 			path = GoogleSheetsPOC;
-			sourceTree = "<group>";
-		};
-		63F6DFBC1FDF4D8600F3AC11 /* Subclasses */ = {
-			isa = PBXGroup;
-			children = (
-				63F6DFBD1FDF4DA400F3AC11 /* Labels.swift */,
-				2385DE7820017E76002F42BC /* Buttons.swift */,
-			);
-			name = Subclasses;
-			sourceTree = "<group>";
-		};
-		63FE5B5D1FDDC4A500904660 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		63FE5B5E1FDDC4AD00904660 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				63D3F0D61FD0F82F008B626B /* Main.storyboard */,
-				631F89531FDDE18500D6A03F /* SetSheetViewController.xib */,
-				63D3F0DE1FD0F82F008B626B /* LaunchScreen.storyboard */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		63FE5B5F1FDDC4B600904660 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				631F89521FDDE18500D6A03F /* SetSheetViewController.swift */,
-				232467522006F78C00275802 /* MainViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		63FE5B601FDDC4BE00904660 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				232488C020152BA800C597C3 /* ProgressView.swift */,
-				23489F9D2016BD20003C06E0 /* SaveManager.swift */,
-				239BD5022054831C0037548E /* Errors */,
-				631F89581FDDE87C00D6A03F /* Extensions */,
-				63FE5B641FDDD46200904660 /* Constants */,
-			);
-			name = Tools;
 			sourceTree = "<group>";
 		};
 		63FE5B611FDDD3D000904660 /* Resources */ = {
@@ -186,6 +175,7 @@
 				63FE5B651FDDD48000904660 /* Constants.swift */,
 			);
 			name = Constants;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		925BCEA3A74C7C619F547C9D /* Pods */ = {
@@ -367,8 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				239BD5042054833D0037548E /* ErrorsEnum.swift in Sources */,
-				2385DE7920017E76002F42BC /* Buttons.swift in Sources */,
-				63F6DFBE1FDF4DA400F3AC11 /* Labels.swift in Sources */,
 				63D3F0D31FD0F82F008B626B /* AppDelegate.swift in Sources */,
 				63FE5B661FDDD48000904660 /* Constants.swift in Sources */,
 				631F895A1FDDE94900D6A03F /* ViewExtensions.swift in Sources */,
