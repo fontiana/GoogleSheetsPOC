@@ -12,7 +12,7 @@ class SetSheetViewController: UIViewController {
         
         let googleSheetsService = GoogleSheetsService(service: service)
         
-        googleSheetsService.getSpreadsheet()
+        googleSheetsService.start()
             .then { sheet -> Void in
                 print(sheet)
             }.catch { (error) in

@@ -9,11 +9,13 @@
 import UIKit
 import Google
 import GoogleSignIn
+import SwiftyBeaver
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let log = SwiftyBeaver.self
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
         var configureError: NSError?

@@ -10,7 +10,24 @@ class GoogleSheetsService {
         self.service = service
     }
     
-    func getSpreadsheet() -> Promise<JSON> {
+    func start() -> Promise<JSON> {
+        return Promise { resolve, reject in
+            getSpreadsheet()
+                .then { sheet -> Void in
+                    if let sheet = sheet {
+                        resolve(sheet)
+                    } else {
+                        
+                    }
+                }
+                .catch { error in
+                    
+                    reject(error)
+            }
+        }
+    }
+    
+    func getSpreadsheet() -> Promise<JSON?> {
         return Promise { resolve, reject in
             if let spreadSheetId = SaveManager.sharedInstance().get(key: SpreadsheetConst.spreadsheetId) {
                 let query = GTLRSheetsQuery_SpreadsheetsGet
