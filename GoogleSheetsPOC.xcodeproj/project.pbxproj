@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		232467532006F78C00275802 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232467522006F78C00275802 /* MainViewController.swift */; };
 		232488C120152BA800C597C3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232488C020152BA800C597C3 /* ProgressView.swift */; };
+		232F6B172055FB8B0084BECA /* GoogleSheetsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232F6B162055FB8B0084BECA /* GoogleSheetsServiceTests.swift */; };
 		23489F9E2016BD20003C06E0 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23489F9D2016BD20003C06E0 /* SaveManager.swift */; };
 		239BD5042054833D0037548E /* ErrorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239BD5032054833D0037548E /* ErrorsEnum.swift */; };
 		23E15212201D045F0045AA5F /* GoogleSheetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E15211201D045F0045AA5F /* GoogleSheetsService.swift */; };
@@ -25,10 +26,23 @@
 		8FF6449FFF184BAEC0229F76 /* Pods_GoogleSheetsPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57002EC994A66395A9A9C31 /* Pods_GoogleSheetsPOC.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		232F6B192055FB8B0084BECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63D3F0C71FD0F82F008B626B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63D3F0CE1FD0F82F008B626B;
+			remoteInfo = GoogleSheetsPOC;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		17E62A00A58D45FAF4DB0AB5 /* Pods-GoogleSheetsPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSheetsPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleSheetsPOC/Pods-GoogleSheetsPOC.debug.xcconfig"; sourceTree = "<group>"; };
 		232467522006F78C00275802 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		232488C020152BA800C597C3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		232F6B142055FB8B0084BECA /* GoogleSheetsPOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleSheetsPOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		232F6B162055FB8B0084BECA /* GoogleSheetsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetsServiceTests.swift; sourceTree = "<group>"; };
+		232F6B182055FB8B0084BECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23489F9D2016BD20003C06E0 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
 		239BD5032054833D0037548E /* ErrorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorsEnum.swift; path = Tools/ErrorsEnum.swift; sourceTree = "<group>"; };
 		23E15211201D045F0045AA5F /* GoogleSheetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetsService.swift; sourceTree = "<group>"; };
@@ -50,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		232F6B112055FB8B0084BECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63D3F0CC1FD0F82F008B626B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,6 +128,23 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		232F6B152055FB8B0084BECA /* GoogleSheetsPOCTests */ = {
+			isa = PBXGroup;
+			children = (
+				232F6B1E2055FC850084BECA /* Services */,
+				232F6B182055FB8B0084BECA /* Info.plist */,
+			);
+			path = GoogleSheetsPOCTests;
+			sourceTree = "<group>";
+		};
+		232F6B1E2055FC850084BECA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				232F6B162055FB8B0084BECA /* GoogleSheetsServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		239BD5022054831C0037548E /* Errors */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				63D3F0D11FD0F82F008B626B /* GoogleSheetsPOC */,
+				232F6B152055FB8B0084BECA /* GoogleSheetsPOCTests */,
 				63D3F0D01FD0F82F008B626B /* Products */,
 				925BCEA3A74C7C619F547C9D /* Pods */,
 				CA8C586F4FEAF75E09288D89 /* Frameworks */,
@@ -139,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				63D3F0CF1FD0F82F008B626B /* GoogleSheetsPOC.app */,
+				232F6B142055FB8B0084BECA /* GoogleSheetsPOCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +237,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		232F6B132055FB8B0084BECA /* GoogleSheetsPOCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 232F6B1B2055FB8B0084BECA /* Build configuration list for PBXNativeTarget "GoogleSheetsPOCTests" */;
+			buildPhases = (
+				232F6B102055FB8B0084BECA /* Sources */,
+				232F6B112055FB8B0084BECA /* Frameworks */,
+				232F6B122055FB8B0084BECA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				232F6B1A2055FB8B0084BECA /* PBXTargetDependency */,
+			);
+			name = GoogleSheetsPOCTests;
+			productName = GoogleSheetsPOCTests;
+			productReference = 232F6B142055FB8B0084BECA /* GoogleSheetsPOCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		63D3F0CE1FD0F82F008B626B /* GoogleSheetsPOC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63D3F0E41FD0F82F008B626B /* Build configuration list for PBXNativeTarget "GoogleSheetsPOC" */;
@@ -224,10 +282,15 @@
 		63D3F0C71FD0F82F008B626B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Fonts;
 				TargetAttributes = {
+					232F6B132055FB8B0084BECA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 63D3F0CE1FD0F82F008B626B;
+					};
 					63D3F0CE1FD0F82F008B626B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3597FT9YR3;
@@ -250,11 +313,19 @@
 			projectRoot = "";
 			targets = (
 				63D3F0CE1FD0F82F008B626B /* GoogleSheetsPOC */,
+				232F6B132055FB8B0084BECA /* GoogleSheetsPOCTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		232F6B122055FB8B0084BECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63D3F0CD1FD0F82F008B626B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +424,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		232F6B102055FB8B0084BECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				232F6B172055FB8B0084BECA /* GoogleSheetsServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63D3F0CB1FD0F82F008B626B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +449,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		232F6B1A2055FB8B0084BECA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63D3F0CE1FD0F82F008B626B /* GoogleSheetsPOC */;
+			targetProxy = 232F6B192055FB8B0084BECA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		63D3F0D61FD0F82F008B626B /* Main.storyboard */ = {
@@ -401,6 +488,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		232F6B1C2055FB8B0084BECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GoogleSheetsPOCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FontsStudio.GoogleSheetsPOCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleSheetsPOC.app/GoogleSheetsPOC";
+			};
+			name = Debug;
+		};
+		232F6B1D2055FB8B0084BECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GoogleSheetsPOCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FontsStudio.GoogleSheetsPOCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleSheetsPOC.app/GoogleSheetsPOC";
+			};
+			name = Release;
+		};
 		63D3F0E21FD0F82F008B626B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -541,6 +670,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		232F6B1B2055FB8B0084BECA /* Build configuration list for PBXNativeTarget "GoogleSheetsPOCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232F6B1C2055FB8B0084BECA /* Debug */,
+				232F6B1D2055FB8B0084BECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		63D3F0CA1FD0F82F008B626B /* Build configuration list for PBXProject "GoogleSheetsPOC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
