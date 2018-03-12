@@ -13,10 +13,10 @@ import SwiftyBeaver
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     let log = SwiftyBeaver.self
-
+    
     func applicationDidFinishLaunching(_ application: UIApplication) {
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
@@ -25,14 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let console = ConsoleDestination()
+        console.format = "$DHH:mm:ss$d $L $M"
+        log.addDestination(console)
         return true
     }
-
+    
     func application(_ application: UIApplication,
                      open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return GIDSignIn.sharedInstance().handle(url,
                                                  sourceApplication: sourceApplication,
                                                  annotation: annotation)
+    }
+    
+    static func shared() -> AppDelegate {
+        return (UIApplication.shared.delegate as? AppDelegate)!
     }
     
     @available(iOS 9.0, *)

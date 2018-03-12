@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23137FD6205587100030AA5C /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23137FD5205587100030AA5C /* Logging.swift */; };
 		232467532006F78C00275802 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232467522006F78C00275802 /* MainViewController.swift */; };
 		232488C120152BA800C597C3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232488C020152BA800C597C3 /* ProgressView.swift */; };
 		23489F9E2016BD20003C06E0 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23489F9D2016BD20003C06E0 /* SaveManager.swift */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		17E62A00A58D45FAF4DB0AB5 /* Pods-GoogleSheetsPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSheetsPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleSheetsPOC/Pods-GoogleSheetsPOC.debug.xcconfig"; sourceTree = "<group>"; };
-		23137FD5205587100030AA5C /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		232467522006F78C00275802 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		232488C020152BA800C597C3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		23489F9D2016BD20003C06E0 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			children = (
 				232488C020152BA800C597C3 /* ProgressView.swift */,
 				23489F9D2016BD20003C06E0 /* SaveManager.swift */,
-				23137FD5205587100030AA5C /* Logging.swift */,
 				239BD5022054831C0037548E /* Errors */,
 				631F89581FDDE87C00D6A03F /* Extensions */,
 				63FE5B641FDDD46200904660 /* Constants */,
@@ -361,7 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				239BD5042054833D0037548E /* ErrorsEnum.swift in Sources */,
-				23137FD6205587100030AA5C /* Logging.swift in Sources */,
 				63D3F0D31FD0F82F008B626B /* AppDelegate.swift in Sources */,
 				63FE5B661FDDD48000904660 /* Constants.swift in Sources */,
 				631F895A1FDDE94900D6A03F /* ViewExtensions.swift in Sources */,

@@ -21,7 +21,6 @@ class GoogleSheetsService {
                     }
                 }
                 .catch { error in
-                    
                     reject(error)
             }
         }
@@ -29,6 +28,7 @@ class GoogleSheetsService {
     
     func getSpreadsheet() -> Promise<JSON?> {
         return Promise { resolve, reject in
+            AppDelegate.shared().log.debug("Buscando spreadsheet")
             if let spreadSheetId = SaveManager.sharedInstance().get(key: SpreadsheetConst.spreadsheetId) {
                 let query = GTLRSheetsQuery_SpreadsheetsGet
                     .query(withSpreadsheetId: spreadSheetId)
@@ -36,8 +36,10 @@ class GoogleSheetsService {
                 
                 service.executeQuery(query, completionHandler: { (_, result, error) in
                     if let error = error {
+                        AppDelegate.shared().log.debug("Erro ao recuperar spreadsheet")
                         reject(error)
                     } else if let result = result {
+                        AppDelegate.shared().log.debug("Spreadsheet localizado")
                         let json = JSON(result)
                         resolve(json)
                     }
